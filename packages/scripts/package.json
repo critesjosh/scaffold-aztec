@@ -9,7 +9,13 @@
     "@aztec/circuits.js": "0.62.0",
     "@aztec/noir-contracts.js": "0.62.0"
   },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.4"
+  },
   "scripts": {
+    "deploy": "node --loader ts-node/esm deploy.ts",
+    "get-block": "node --loader ts-node/esm getBlock.ts",
     "update": "aztec update ."
   }
 }
