@@ -1,10 +1,6 @@
-# Aztec Starter
+# Scaffold-Aztec
 
-This repo is meant to be a starting point for writing Aztec contracts and tests.
-
-You can find the Easy Private Voting contract in `./src/main.nr`. A simple integration test is in `./src/test/index.test.ts`.
-
-The corresponding tutorial can be found in the [Aztec docs here](https://docs.aztec.network/tutorials/codealong/contract_tutorials/private_voting_contract).
+This repo is meant to be a starting point for learning about Aztec contracts and tests.
 
 ## Getting Started
 
@@ -39,16 +35,10 @@ aztec start --sandbox
 ## Install packages
 
 ```bash
-yarn install
+yarn
 ```
 
 ## Compile
-
-```bash
-aztec-nargo compile
-```
-
-or
 
 ```bash
 yarn compile
@@ -92,6 +82,12 @@ Get the contract code from the monorepo. The script will look at the versions de
 
 ```bash
 yarn update
+```
+
+You can specify a different version with:
+
+```bash
+VERSION=0.x.x yarn update
 ```
 
 You may need to update permissions with:

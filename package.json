@@ -1,5 +1,5 @@
 {
-  "name": "private_voting_codespace",
+  "name": "scaffold-aztec",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/critesjosh/private_voting_codespace.git",
@@ -14,7 +14,7 @@
     "deploy": "node --loader ts-node/esm scripts/deploy.ts",
     "get-block": "node --loader ts-node/esm scripts/getBlock.ts",
     "test": "NODE_NO_WARNINGS=1 node --experimental-vm-modules $(yarn bin jest) --no-cache --runInBand --config jest.integration.config.json && aztec test",
-    "update": "aztec update --contract . && ./.github/scripts/update_contract.sh $(grep -oP 'tag\\s*=\\s*\"\\K[^\"]+' \"Nargo.toml\" | head -1) && yarn"
+    "update": "VERSION=${VERSION:-'latest'} &&  aztec update --contract . --aztec-version $VERSION  && ./.github/scripts/update_contract.sh $(grep -oP 'tag\\s*=\\s*\"\\K[^\"]+' \"Nargo.toml\" | head -1) && yarn"
   },
   "dependencies": {
     "@aztec/accounts": "0.62.0",
