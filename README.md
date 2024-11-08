@@ -1,6 +1,6 @@
 # Scaffold-Aztec
 
-This repo is meant to be a starting point for learning about Aztec contracts and tests.
+This repo is meant to be a starting point for learning about Aztec contracts and testing.
 
 ## Getting Started
 

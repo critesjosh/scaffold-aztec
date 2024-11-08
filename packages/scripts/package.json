@@ -1,0 +1,15 @@
+{
+  "name": "scripts",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "@aztec/accounts": "0.62.0",
+    "@aztec/circuits.js": "0.62.0",
+    "@aztec/noir-contracts.js": "0.62.0"
+  },
+  "scripts": {
+    "update": "aztec update ."
+  }
+}

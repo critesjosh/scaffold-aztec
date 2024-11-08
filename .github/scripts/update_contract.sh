@@ -1,7 +1,7 @@
 #!/bin/bash
 
-copy_to_file_path="."
-version_tag="$1"
+copy_to_file_path="$1"
+version_tag="$2"
 
 echo "version tag: $version_tag"
 nargo_file_path="$copy_to_file_path/Nargo.toml"
@@ -42,7 +42,7 @@ fi
 if [ "$GITHUB_ACTIONS" == "true" ]; then
     tmp_dir="$GITHUB_WORKSPACE/tmp"
 else
-    tmp_dir="$copy_to_file_path/tmp"
+    tmp_dir="./tmp"
 fi
 
 # Clone the repository into a tmp folder
@@ -53,7 +53,7 @@ cd $tmp_dir && git checkout $version_tag && cd ..
 if [ $? -eq 0 ]; then
 
     # Check if the directory exists
-    if [ -d "$tmp_dir/$contracts_path/$name_value" ]; then
+    if [ -e "$tmp_dir/$contracts_path/$name_value" ]; then
         echo "Directory found: $name_value"
         cp -r $tmp_dir/$contracts_path/$name_value/src/ $copy_to_file_path/
         rm -rf $tmp_dir

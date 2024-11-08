@@ -63,10 +63,14 @@ describe("Voting", () => {
 
     it("It mints a token", async () => {
         const contract = await TokenContract.deploy(wallets[0], accounts[0].address, "TestToken", "TT", 18).send().deployed();
+
+        console.log("TODO: implement")
     }, 300_000)
 
     it("It transfers a token", async () => {
         const contract = await TokenContract.deploy(wallets[0], accounts[0].address, "TestToken", "TT", 18).send().deployed();
+
+        console.log("TODO: implement")
     }, 300_000)
 
 });

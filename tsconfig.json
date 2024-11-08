@@ -22,10 +22,12 @@
     "jsx": "react-jsx"
   },
   "include": [
-    "src",
+    "packages/contracts/token_contract/src",
     "scripts/**/*",
-    "src/**/*.json",
-    "src/artifacts/*",
-    "target/*"
+    "packages/contracts/token_contract/src/**/*.json",
+    "packages/contracts/token_contract/src/artifacts/*",
+    "target/*",
+    "packages/scripts/deploy.ts",
+    "packages/scripts/getBlock.ts"
   ]
 }
