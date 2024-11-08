@@ -13,6 +13,6 @@
       "extensions": ["noir-lang.vscode-noir"]
     }
   },
-  "workspaceMount": "source=${localWorkspaceFolder},target=/root/workspace,type=bind",
-  "workspaceFolder": "/root/workspace"
+  "workspaceMount": "source=${localWorkspaceFolder},target=/root/workspace/scaffold-aztec,type=bind",
+  "workspaceFolder": "/root/workspace/scaffold-aztec"
 }
